@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+.max-width {
+	max-width: 1300px;
+	padding: 0 80px;
+	margin: auto;
+}
+.navbar {
+    color:white;
+	width: 100%;
+	padding: 22px 0;
+	position: relative;
+	font-family: 'Oswald', sans-serif;
+	transition: all 0.3s ease;
+}
+.navbar .max-width {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.navbar .logo a{
+	color: white;
+	font-size: 33px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.navbar .logo a:hover {
+    color: #ff3838;
+}
+.navbar .menu li{
+	list-style: none;
+	display: inline-block;
+}
+.navbar .menu li a {
+	color: white;
+	font-size: 28px;
+	font-weight: 500;
+	margin-left: 25px;
+	transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+	color: #ff3838;
+}
+.menu-btn{
+	color: #737272;
+	font-size: 23px;
+	cursor: pointer;
+	display: none;
+}
+body{
+    background-color:#020117;
+    padding: 0px;
+    margin:0px;
+    width:100%;
+    height:100vh;
+    font-family: 'Lato';
+}
+.wrapper{
+    position: absolute;
+    top:380%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:90%;
+    max-width: 1450px;
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.wrapper2{
+    position: absolute;
+    top:130%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:90%;
+    max-width: 1450px;
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    flex: 1;
+    flex-basis: 300px;
+    flex-grow: 0;
+    height: 430px;
+    box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+    cursor: pointer;
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    overflow: hidden;
+    position: relative;
+    margin-top: 100px;
+}
+.card img{
+    width: 100%;
+    height:100%;
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+}
+.descriptions{
+    color:white;
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width:100%;
+    height:100%;
+    transition: all .7s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    clip-path: circle(0% at 100% 100%);
+}
+.card:hover .descriptions{
+    left:0px;
+    transition: all .7s ease-in-out;
+    clip-path: circle(75%);
+}
+.card:hover{
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+    transform: scale(.97);
+}
+.card:hover img{
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    transform: scale(1.6) rotate(0deg);
+    filter: blur(3px);
+}
+.card h1{
+    color: #ff3838;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+.card p{
+    line-height: 24px;
+    height: 70%;
+}
+.card button{
+    width: fit-content;
+    height: 40px;
+    cursor: pointer;
+    border-style: none;
+    background-color: #ff3838;
+    color:#fff;
+    font-size: 15px;
+    outline: none;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.4);
+    transition: all .5s ease-in-out;
+}
+.card button:hover{
+    transform: scale(.95) translateX(-5px);
+    transition: all .5s ease-in-out;
+}
+#table1 {
+    width: 400px;
+    color: white;
+    margin-left: 580px;
+    font-size: 18px;
+}
+.student {
+    padding-bottom: 22px;
+    margin-top: 50px;
+    margin-left:660px;
+    width:230px;
+}
+.container{
+    color:white;
+    position: relative;
+}
+@media (max-width: 947px) {
+	.max-width {
+		padding: 0 50px;
+	}
+	.menu-btn{
+	color: #737272;
+	display: block;
+	z-index: 999;
+	}
+	.navbar .menu {
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		left: -100%;
+		top: 0;
+		background: white;
+		text-align: center;
+		padding-top: 150px;
+		transition: all 0.3s ease;
+	}
+	.navbar .menu.active {
+		left:0;
+	}
+	.navbar .menu li {
+		display: block;
+	}
+	.navbar .menu li a{
+		display: inline-block;
+		margin: 20px 0;
+		font-size: 25px;
+    }
+    
+}
